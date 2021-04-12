@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">  
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>React and your introduction!</title>
-
-
-  </style>
+  <title>Baby Name Generator</title>
 </head>
 <body>
   <div class="container">
-    <h1>Papai do Ano</h1>
+    <h1>Welcome to Baby Generator</h1>
   
     <div id="root"></div>
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
@@ -23,15 +20,14 @@
 
       class App extends React.Component{
 
-        //----------------------
         constructor(){
           super()
 
           this.state={
-            nome:"Mateus",
-            idade: 35,
-            sexo: "Masculino",
-            origem: "São Paulo"
+            name:"Mateus",
+            age: 35,
+            gender: "Male",
+            country: "Brazil"
           }
           
           this.cmd_click = this.cmd_click.bind(this)
@@ -39,10 +35,10 @@
         }
         // evento click
         cmd_click(){
-          this.setState({nome: "Ellie"})
-          this.setState({idade: "0"})
-          this.setState({sexo: "Feminino"})
-          this.setState({origem: "França / Brasil"})
+          this.setState({name: "Ellie"})
+          this.setState({age: "0"})
+          this.setState({gender: "Female"})
+          this.setState({country: "France"})
         
         }
 
@@ -50,11 +46,11 @@
         render(){
           return(
             <div>
-              <p>Nome: {this.state.nome}</p>
-              <p>Idade: {this.state.idade}</p>
-              <p>Sexo: {this.state.sexo}</p>
-              <p>Origem: {this.state.origem}</p>
-              <button onClick={this.cmd_click}>Clique no Botao e descubra o nome da Baby</button>
+              <p>Father Name: {this.state.name}</p>
+              <p>Age: {this.state.age}</p>
+              <p>Gender: {this.state.gender}</p>
+              <p>Country: {this.state.country}</p>
+              <button onClick={this.cmd_click}>Click on Button!</button>
             </div>
           )
         }
@@ -65,9 +61,6 @@
         document.getElementById('root')
       )
 
-
-    // const root = document.getElementById('root');
-    // ReactDOM.render(<App />,root);
     </script>
   </div>
 </body>
